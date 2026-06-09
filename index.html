@@ -8,7 +8,7 @@
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,9 +17,9 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html" aria-label="The Alma Pub events enquiry home">
-        <span class="brand-mark">A</span>
+        <img class="brand-logo" src="assets/alma-logo-sketch.png" alt="The Alma Sidcup Kent">
         <span>
-          <strong>The Alma Pub</strong>
+          <strong>THE ALMA</strong>
           <small>Private events & function room enquiries</small>
         </span>
       </a>
@@ -35,8 +35,9 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
+          <img class="hero-logo" src="assets/alma-logo-sketch.png" alt="The Alma pub illustration and logo">
           <p class="eyebrow">Function room enquiries</p>
-          <h1>Host a considered private event at The Alma.</h1>
+          <h1>Private Events at The Alma</h1>
           <p class="lead">
             Tell us what you’re planning, choose an available date, and send a complete enquiry for owner approval.
             This helps us keep the room suitable, well-managed and enjoyable for everyone.
@@ -50,7 +51,7 @@
           </p>
         </div>
 
-        <aside class="card hero-card" aria-label="Event enquiry summary">
+        <aside class="card hero-card sign-card" aria-label="Event enquiry summary">
           <h2>Best suited for</h2>
           <ul class="tick-list">
             <li>Private dining and family meals</li>
@@ -74,7 +75,7 @@
           </p>
         </div>
 
-        <div class="calendar-shell card">
+        <div class="calendar-shell card sign-card">
           <div class="calendar-toolbar">
             <button class="icon-button" id="prevMonth" type="button" aria-label="Previous month">‹</button>
             <h3 id="calendarTitle">Calendar</h3>
@@ -111,7 +112,7 @@
             and help the team quickly spot events that are a strong fit.
           </p>
 
-          <div class="card mini-card">
+          <div class="card mini-card sign-card">
             <h3>Automatic filters</h3>
             <p>
               The form politely redirects enquiries that are not suitable, such as 18th birthday parties,
@@ -120,7 +121,7 @@
           </div>
         </div>
 
-        <form class="card enquiry-form" id="eventForm" method="post">
+        <form class="card enquiry-form sign-card" id="eventForm" method="post">
           <input type="hidden" name="selected_date" id="selectedDateInput">
           <input type="hidden" name="status" value="New enquiry - owner approval required">
 
@@ -272,15 +273,15 @@
         </div>
 
         <div class="cards-three">
-          <article class="card">
+          <article class="card sign-card">
             <h3>Events we welcome</h3>
             <p>Adult celebrations, dining-led gatherings, wakes, business events, private meals and well-organised local groups.</p>
           </article>
-          <article class="card">
+          <article class="card sign-card">
             <h3>Events we may decline</h3>
             <p>18th birthdays, children’s parties, mostly under-21 events, or loud late-night parties that do not suit the pub.</p>
           </article>
-          <article class="card">
+          <article class="card sign-card">
             <h3>Approval process</h3>
             <p>The owner reviews the details, confirms availability, then offers a hold, deposit request or alternative date.</p>
           </article>
@@ -291,7 +292,7 @@
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <p><strong>The Alma Pub</strong> · Private events and function room enquiries</p>
+      <p><strong>THE ALMA</strong> · Sidcup, Kent · Private events and function room enquiries</p>
       <p>Designed to reduce vague enquiries, protect the venue, and improve booking quality.</p>
     </div>
   </footer>
