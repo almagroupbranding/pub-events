@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Private Events & Function Room Enquiries | The Alma Pub</title>
+  <meta name="description" content="Enquire about private events, celebrations, meetings and elegant gatherings at The Alma Pub. Check available dates and submit a detailed event request for owner approval.">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="The Alma Pub events enquiry home">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>The Alma Pub</strong>
+          <small>Private events & function room enquiries</small>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#availability">Availability</a>
+        <a href="#enquiry">Enquire</a>
+        <a href="#fit">Suitable events</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Function room enquiries</p>
+          <h1>Host a considered private event at The Alma.</h1>
+          <p class="lead">
+            Tell us what you’re planning, choose an available date, and send a complete enquiry for owner approval.
+            This helps us keep the room suitable, well-managed and enjoyable for everyone.
+          </p>
+          <div class="cta-row">
+            <a class="button primary" href="#availability">Check dates</a>
+            <a class="button secondary" href="#enquiry">Start enquiry</a>
+          </div>
+          <p class="note">
+            Submitting this form does not confirm a booking. Dates are held only after The Alma confirms approval.
+          </p>
+        </div>
+
+        <aside class="card hero-card" aria-label="Event enquiry summary">
+          <h2>Best suited for</h2>
+          <ul class="tick-list">
+            <li>Private dining and family meals</li>
+            <li>Wakes and respectful gatherings</li>
+            <li>Corporate meetings and networking</li>
+            <li>Engagements, anniversaries and mature celebrations</li>
+            <li>Community groups and ticketed talks</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="availability">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Step 1</p>
+          <h2>Choose an available date</h2>
+          <p>
+            Dates shown as booked are not available. Dates marked as pending may already be under review.
+            Final approval is always confirmed by the owner.
+          </p>
+        </div>
+
+        <div class="calendar-shell card">
+          <div class="calendar-toolbar">
+            <button class="icon-button" id="prevMonth" type="button" aria-label="Previous month">‹</button>
+            <h3 id="calendarTitle">Calendar</h3>
+            <button class="icon-button" id="nextMonth" type="button" aria-label="Next month">›</button>
+          </div>
+
+          <div class="calendar-legend" aria-label="Calendar legend">
+            <span><i class="legend available"></i> Available</span>
+            <span><i class="legend pending"></i> Pending</span>
+            <span><i class="legend booked"></i> Booked</span>
+            <span><i class="legend selected"></i> Selected</span>
+          </div>
+
+          <div class="calendar-grid weekdays" aria-hidden="true">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </div>
+          <div class="calendar-grid" id="calendarDays" aria-live="polite"></div>
+
+          <div class="selected-date-box">
+            <strong>Selected date:</strong>
+            <span id="selectedDateText">No date selected yet.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-warm" id="enquiry">
+      <div class="wrap form-layout">
+        <div class="section-heading sticky-copy">
+          <p class="eyebrow">Step 2</p>
+          <h2>Send a detailed event request</h2>
+          <p>
+            The questions below are designed to reduce vague emails, protect the venue’s atmosphere,
+            and help the team quickly spot events that are a strong fit.
+          </p>
+
+          <div class="card mini-card">
+            <h3>Automatic filters</h3>
+            <p>
+              The form politely redirects enquiries that are not suitable, such as 18th birthday parties,
+              children’s parties, or high-risk late-night drinking events.
+            </p>
+          </div>
+        </div>
+
+        <form class="card enquiry-form" id="eventForm" method="post">
+          <input type="hidden" name="selected_date" id="selectedDateInput">
+          <input type="hidden" name="status" value="New enquiry - owner approval required">
+
+          <fieldset>
+            <legend>Your event</legend>
+
+            <label for="eventType">Type of event <span aria-hidden="true">*</span></label>
+            <select id="eventType" name="event_type" required>
+              <option value="">Please choose…</option>
+              <option value="Private dining">Private dining</option>
+              <option value="Wake / memorial gathering">Wake / memorial gathering</option>
+              <option value="Corporate meeting / networking">Corporate meeting / networking</option>
+              <option value="Engagement / anniversary">Engagement / anniversary</option>
+              <option value="Birthday 21+">Birthday celebration, 21+</option>
+              <option value="Community group / talk">Community group / talk</option>
+              <option value="Wedding related gathering">Wedding related gathering</option>
+              <option value="18th birthday">18th birthday party</option>
+              <option value="Children party">Children’s party</option>
+              <option value="Other">Other</option>
+            </select>
+
+            <label for="eventName">Event name or occasion <span aria-hidden="true">*</span></label>
+            <input id="eventName" name="event_name" required maxlength="90" placeholder="e.g. 40th anniversary dinner, local business networking">
+
+            <div class="two-col">
+              <div>
+                <label for="guestCount">Expected number of guests <span aria-hidden="true">*</span></label>
+                <input id="guestCount" name="guest_count" type="number" min="1" max="120" required placeholder="e.g. 45">
+              </div>
+              <div>
+                <label for="ageRange">Main guest age range <span aria-hidden="true">*</span></label>
+                <select id="ageRange" name="age_range" required>
+                  <option value="">Please choose…</option>
+                  <option value="Mostly 21-30">Mostly 21–30</option>
+                  <option value="Mostly 30-45">Mostly 30–45</option>
+                  <option value="Mostly 45-65">Mostly 45–65</option>
+                  <option value="Mostly 65+">Mostly 65+</option>
+                  <option value="Mixed adult ages">Mixed adult ages</option>
+                  <option value="Includes children">Includes children</option>
+                  <option value="Mostly under 21">Mostly under 21</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="two-col">
+              <div>
+                <label for="startTime">Preferred start time <span aria-hidden="true">*</span></label>
+                <input id="startTime" name="start_time" type="time" required>
+              </div>
+              <div>
+                <label for="endTime">Preferred finish time <span aria-hidden="true">*</span></label>
+                <input id="endTime" name="end_time" type="time" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Food, drink and atmosphere</legend>
+
+            <label for="foodRequirement">Food requirement <span aria-hidden="true">*</span></label>
+            <select id="foodRequirement" name="food_requirement" required>
+              <option value="">Please choose…</option>
+              <option value="Sit-down meal">Sit-down meal</option>
+              <option value="Buffet / grazing table">Buffet / grazing table</option>
+              <option value="Canapés / light bites">Canapés / light bites</option>
+              <option value="Drinks only">Drinks only</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+
+            <label for="barSpend">Estimated drinks / bar spend</label>
+            <select id="barSpend" name="estimated_bar_spend">
+              <option value="">Please choose…</option>
+              <option value="Under £250">Under £250</option>
+              <option value="£250-£500">£250–£500</option>
+              <option value="£500-£1000">£500–£1,000</option>
+              <option value="£1000+">£1,000+</option>
+              <option value="Unsure">Unsure</option>
+            </select>
+
+            <label for="entertainment">Entertainment or extras</label>
+            <textarea id="entertainment" name="entertainment" rows="3" placeholder="e.g. background music, speeches, projector, live acoustic music. Please mention DJs or amplified music."></textarea>
+
+            <label for="eventTone">How would you describe the event? <span aria-hidden="true">*</span></label>
+            <select id="eventTone" name="event_tone" required>
+              <option value="">Please choose…</option>
+              <option value="Quiet and respectful">Quiet and respectful</option>
+              <option value="Warm and sociable">Warm and sociable</option>
+              <option value="Professional / business">Professional / business</option>
+              <option value="Elegant celebration">Elegant celebration</option>
+              <option value="Loud party atmosphere">Loud party atmosphere</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your details</legend>
+
+            <div class="two-col">
+              <div>
+                <label for="firstName">First name <span aria-hidden="true">*</span></label>
+                <input id="firstName" name="first_name" autocomplete="given-name" required>
+              </div>
+              <div>
+                <label for="lastName">Last name <span aria-hidden="true">*</span></label>
+                <input id="lastName" name="last_name" autocomplete="family-name" required>
+              </div>
+            </div>
+
+            <div class="two-col">
+              <div>
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="phone">Phone <span aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+              </div>
+            </div>
+
+            <label for="message">Anything else The Alma should know?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Access needs, timings, layout, catering notes, previous visits, budget guidance, etc."></textarea>
+
+            <label class="checkbox-label">
+              <input type="checkbox" id="approvalCheck" required>
+              <span>I understand this is an enquiry only and the date is not confirmed until The Alma approves it.</span>
+            </label>
+
+            <div id="formWarning" class="warning" role="alert" hidden></div>
+            <div id="formSuccess" class="success" role="status" hidden></div>
+
+            <button class="button primary full" type="submit">Send event enquiry</button>
+            <p class="small-print">
+              For static GitHub Pages hosting, this form can send via Formspree, Netlify Forms, or a Google Apps Script endpoint.
+              See README.md for setup.
+            </p>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="fit">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="eyebrow">Venue fit</p>
+          <h2>Clear expectations before anyone emails</h2>
+          <p>
+            This page sets the tone before the enquiry arrives. It saves staff time, improves lead quality,
+            and positions the function room as a proper private-hire space rather than “just a room above a pub”.
+          </p>
+        </div>
+
+        <div class="cards-three">
+          <article class="card">
+            <h3>Events we welcome</h3>
+            <p>Adult celebrations, dining-led gatherings, wakes, business events, private meals and well-organised local groups.</p>
+          </article>
+          <article class="card">
+            <h3>Events we may decline</h3>
+            <p>18th birthdays, children’s parties, mostly under-21 events, or loud late-night parties that do not suit the pub.</p>
+          </article>
+          <article class="card">
+            <h3>Approval process</h3>
+            <p>The owner reviews the details, confirms availability, then offers a hold, deposit request or alternative date.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>The Alma Pub</strong> · Private events and function room enquiries</p>
+      <p>Designed to reduce vague enquiries, protect the venue, and improve booking quality.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

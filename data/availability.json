@@ -1,0 +1,12 @@
+{
+  "booked": [
+    "2026-07-04",
+    "2026-07-18",
+    "2026-08-01"
+  ],
+  "pending": [
+    "2026-07-11",
+    "2026-08-15"
+  ],
+  "notes": "Edit these ISO dates manually for the simple GitHub Pages version. For live Google Calendar sync, use the Apps Script template."
+}
